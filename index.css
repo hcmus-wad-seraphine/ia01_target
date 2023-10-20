@@ -125,8 +125,7 @@ section.section {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    padding: 4rem 0;
-    gap: 3rem;
+    padding: 3.5rem 0;
 }
 
 section.section-1 div {
@@ -149,12 +148,9 @@ section.section-3 ul {
     grid-column: span 5;
 }
 
-section.section-4 h2 {
+section.section-4 h2,
+div {
     grid-column: span 12;
-}
-
-section.section-4 img {
-    grid-column: span 3;
 }
 
 section.section-5 * {
@@ -162,6 +158,10 @@ section.section-5 * {
 }
 
 /* section 1 details */
+section.section-1 {
+    gap: 4rem;
+}
+
 section.section-1 div:first-child {
     display: flex;
     flex-direction: column;
@@ -188,6 +188,7 @@ section.section-1 div:last-child img {
 
 section.section-1 div:last-child i {
     position: absolute;
+    z-index: 10;
     top: 50%;
     transform: translateY(-50%);
     font-size: 2.5rem;
@@ -206,6 +207,10 @@ section.section-1 div:last-child i:last-child {
 }
 
 /* section 2 details */
+section.section-2 {
+    gap: 4rem;
+}
+
 section.section-2 > div {
     display: flex;
     gap: 1.25rem;
@@ -219,4 +224,47 @@ section.section-2 > div > i {
 section.section-2 > div h2 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
+}
+
+/* section 3 details */
+section.section-3 {
+    row-gap: 1.5rem;
+    column-gap: 4rem;
+}
+
+section.section-3 ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.section-3 ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    color: var(--secondary);
+}
+
+section.section-3 ul li i {
+    background-color: var(--dark);
+    border: 1px solid var(--dark);
+    border-radius: 1000px;
+    color: white;
+}
+
+/* section 4 details */
+section.section-4 {
+    row-gap: 1.5rem;
+}
+
+section.section-4 div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.5rem;
+}
+
+section.section-4 div img {
+    border: 4px solid var(--gray-line);
+    width: 100%;
 }
